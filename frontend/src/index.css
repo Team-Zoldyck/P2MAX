@@ -2,17 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
   margin: 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
+  color: #05377f;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
