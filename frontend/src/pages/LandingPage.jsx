@@ -44,38 +44,40 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div>
-        <h1>What Makes P2Max Standout</h1>
-        <div>
-          <div>
-            <div>
+      <div className=" py-20 px-20 justify-center items-center relative">
+        <h1 className="text-3xl md:text-5xl font-bold text-center">
+          What Makes P2Max Standout
+        </h1>
+        <div className="flex mt-16 gap-7">
+          <div className=" flex flex-col justify-center items-center py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
+            <div className="flex justify-center items-center gap-5">
               <img src={fast_transfer} alt="fast_transfer" />
-              <h2>Fast Transfers</h2>
+              <h2 className="text-2xl font-bold text-center">Fast Transfers</h2>
             </div>
-            <p>
+            <p className="text-base">
               We provide quick, fast and easy transfers from bank to bank to
               seamlessly fit into your busy and productive lifestyle.
             </p>
           </div>
 
-          <div>
-            <div>
+          <div className=" flex flex-col justify-center items-center py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
+            <div className="flex justify-center items-center gap-5">
               <img src={security} alt="security" />
-              <h2>Security</h2>
+              <h2 className="text-2xl  font-bold text-center">Security</h2>
             </div>
-            <p>
+            <p className="text-base">
               With P2Max It’s never been easier to send and receive money, but
               that doesn’t mean it shouldn’t be safe. We provide the peace of
               mind your looking for.{" "}
             </p>
           </div>
 
-          <div>
-            <div>
+          <div className=" flex flex-col justify-center items-center py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
+            <div className="flex justify-center items-center gap-5">
               <img src={scheduler} alt="scheduler" />
-              <h2>Scheduler</h2>
+              <h2 className="text-2xl  font-bold text-center">Scheduler</h2>
             </div>
-            <p>
+            <p className="text-xs">
               Easily schedule your transactions to be processed at a later date
               straight from your dashboard.
             </p>

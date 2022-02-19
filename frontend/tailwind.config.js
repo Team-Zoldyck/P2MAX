@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {
       inset: {
-        '90px': '90px',
-        '260px': '260',
+        "90px": "90px",
+        "260px": "260",
       },
       colors: {
         green: "#41dc65;",
