@@ -1,3 +1,4 @@
 # P2MAX
-A peer to peer money transfer application that allows tyou send money to friends & family without charges 
 
+With P2Max, you can send so much more money
+A peer to peer money transfer application that allows you send money to friends & family without charges 
