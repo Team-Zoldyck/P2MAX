@@ -1,7 +1,15 @@
-body{
+body {
   color: #05377f;
 }
 
 nav {
   color: #05377f;
+}
+
+#btn {
+  width: 230px;
+  height: 58px;
+  border-radius: 4px;
+  background: #2b54e4;
+  color: #fff;
 }

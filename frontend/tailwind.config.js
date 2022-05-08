@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        matic: '#05377f;',
+        green: "#41dc65;",
+        matic: "#05377f;",
       },
       boxShadow: {
         nav: "0 12px 40px rgba(128, 128, 128, 0.1)",
@@ -11,6 +12,14 @@ module.exports = {
       fontFamily: {
         workSans: ['"Work sans"', "sans-serif"],
       },
+    },
+    fontSize: {
+      "3xl": [
+        "32px",
+        {
+          lineHeight: "37.5px",
+        },
+      ],
     },
   },
   plugins: [],
