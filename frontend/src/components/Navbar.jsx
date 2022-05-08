@@ -15,42 +15,42 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4 text-matic">
               <a
-                href="#"
+                href="/"
                 className=" hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium"
               >
                 Home
               </a>
 
               <a
-                href="#"
+                href="/"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Transfer
               </a>
 
               <a
-                href="#"
+                href="/"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 About us
               </a>
 
               <a
-                href="#"
+                href="/"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 FAQS
               </a>
 
               <a
-                href="#"
+                href="/"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Support
               </a>
 
               <a
-                href="#"
+                href="/"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Login
@@ -117,41 +117,41 @@ const Navbar = () => {
             <div className="md:hidden" id="mobile-menu">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-matic">
                 <a
-                  href="#"
+                  href="/"
                   className="hover:bg-gray-700  block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Home
                 </a>
 
                 <a
-                  href="#"
+                  href="/"
                   className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Transfers
                 </a>
 
                 <a
-                  href="#"
+                  href="/"
                   className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   About Us
                 </a>
 
                 <a
-                  href="#"
+                  href="/"
                   className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   FAQS
                 </a>
 
                 <a
-                  href="#"
+                  href="/"
                   className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Support
                 </a>
                 <a
-                  href="#"
+                  href="/"
                   className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Login
