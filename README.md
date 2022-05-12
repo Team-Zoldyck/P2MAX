@@ -3,7 +3,7 @@ A P2P Web Payment Application
 An application that allows you send money to friends & family without charges. 
 
 # Stack
-React JS & Node JS 
+React JS, Tailwind CSS & Node JS 
 
 # Design 
 click link to go to figma file https://www.figma.com/file/M9fATS6KgnPfBhniGQMmQE/Zuri-Project?node-id=385%3A25
