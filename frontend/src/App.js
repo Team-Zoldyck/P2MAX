@@ -1,11 +1,11 @@
-import './App.css';
-import LandingPage from './pages/LandingPage';
-
+import React from "react";
+import "./App.css";
+import RoutesComponent from "./router/RoutesComponent";
 function App() {
   return (
-    <div>
-         <LandingPage />
-    </div>
+    <>
+      <RoutesComponent />
+    </>
   );
 }
 
