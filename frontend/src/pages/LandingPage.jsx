@@ -48,36 +48,37 @@ const LandingPage = () => {
         <h1 className="text-3xl md:text-5xl font-bold text-center">
           What Makes P2Max Standout
         </h1>
-        <div className="flex mt-16 gap-7">
-          <div className=" flex flex-col justify-center items-center py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
-            <div className="flex justify-center items-center gap-5">
+        {/* md:flex-row   */}
+        <div className="flex flex-col lg:flex-row mt-16 gap-7">
+          <div className=" flex flex-col justify-center items-center gap-[5rem] py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
+            <div className="flex justify-center items-center gap-5 mt-[2.6rem]">
               <img src={fast_transfer} alt="fast_transfer" />
               <h2 className="text-2xl font-bold text-center">Fast Transfers</h2>
             </div>
-            <p className="text-base">
+            <p className="text-base line-height-[1.4rem] max-w-[15rem]">
               We provide quick, fast and easy transfers from bank to bank to
               seamlessly fit into your busy and productive lifestyle.
             </p>
           </div>
 
-          <div className=" flex flex-col justify-center items-center py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
-            <div className="flex justify-center items-center gap-5">
+          <div className=" flex flex-col justify-center items-center gap-[5rem]  py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
+            <div className="flex justify-center items-center gap-5 mt-[2.6rem]">
               <img src={security} alt="security" />
               <h2 className="text-2xl  font-bold text-center">Security</h2>
             </div>
-            <p className="text-base">
+            <p className="text-base line-height-[1.4rem] max-w-[15rem]">
               With P2Max It’s never been easier to send and receive money, but
               that doesn’t mean it shouldn’t be safe. We provide the peace of
               mind your looking for.{" "}
             </p>
           </div>
 
-          <div className=" flex flex-col justify-center items-center py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
-            <div className="flex justify-center items-center gap-5">
+          <div className=" flex flex-col justify-center items-center gap-[5rem] py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
+            <div className="flex justify-center items-center gap-5 mt-[2.6rem]">
               <img src={scheduler} alt="scheduler" />
               <h2 className="text-2xl  font-bold text-center">Scheduler</h2>
             </div>
-            <p className="text-xs">
+            <p className="text-base line-height-[1.4rem] max-w-[15rem]">
               Easily schedule your transactions to be processed at a later date
               straight from your dashboard.
             </p>
