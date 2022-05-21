@@ -5,6 +5,8 @@ module.exports = {
       colors: {
         green: "#41dc65;",
         matic: "#05377f;",
+        subtle: "#F7F7FA",
+        secondary: "#2B54E4"
       },
       boxShadow: {
         nav: "0 12px 40px rgba(128, 128, 128, 0.1)",
