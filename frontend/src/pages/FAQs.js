@@ -1,9 +1,7 @@
 import React from 'react'
-import { AiOutlineSearch } from 'react-icons/ai';
 import Navbar from "../components/Navbar";
 import FAQsCard from "../components/FAQs"
 import Footer from "../components/footer"
-import SearchIcon from "../assets/images/search.svg"
 
 const FAQSData = [
     {
