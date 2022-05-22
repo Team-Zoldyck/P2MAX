@@ -48,8 +48,7 @@ const LandingPage = () => {
         <h1 className="text-3xl md:text-5xl font-bold text-center">
           What Makes P2Max Standout
         </h1>
-        {/* md:flex-row   */}
-        <div className="flex flex-col lg:flex-row mt-16 gap-7">
+        <div className="flex flex-col justify-center items-center md:flex-row mt-16 gap-7">
           <div className=" flex flex-col justify-center items-center gap-[5rem] py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
             <div className="flex justify-center items-center gap-5 mt-[2.6rem]">
               <img src={fast_transfer} alt="fast_transfer" />
