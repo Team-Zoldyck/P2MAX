@@ -2,6 +2,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     extend: {
+      inset: {
+        "90px": "90px",
+        "260px": "260",
+      },
       colors: {
         green: "#41dc65;",
         matic: "#05377f;",
