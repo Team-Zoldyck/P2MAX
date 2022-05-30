@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import logo from "../assets/images/logo.png";
 import { Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,47 +15,47 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4 text-matic">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className=" hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium"
               >
                 Home
-              </a>
+              </Link>
 
-              <a
-                href="/"
+              <Link
+                to="/transfers"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Transfer
-              </a>
+              </Link>
 
-              <a
-                href="/"
+              <Link
+                to="/about"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 About us
-              </a>
+              </Link>
 
-              <a
-                href="/"
+              <Link
+                to="/faq"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 FAQS
-              </a>
+              </Link>
 
-              <a
-                href="/"
+              <Link
+                to="/support"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Support
-              </a>
+              </Link>
 
-              <a
-                href="/"
+              <Link
+                to="/login"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Login
-              </a>
+              </Link>
             </div>
           </div>
 
