@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <>
       <div>
-        <nav className="bg-white w-full flex items-center justify-between py-2 px-16 shadow-nav text-matic">
+        <nav className="bg-white w-full flex items-center justify-between py-4 px-16 shadow-nav text-matic">
           <div className="flex-shrink-0">
             <img src={logo} alt="Logo" />
           </div>
@@ -37,7 +37,7 @@ const Navbar = () => {
               </Link>
 
               <Link
-                to="/faq"
+                to="/faqs"
                 className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 FAQS
