@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from "../components/Navbar";
 import FAQsCard from "../components/FAQs"
 import Footer from "../components/footer"
 
@@ -32,7 +31,6 @@ const FAQSData = [
 
 const FAQs = () => {
     return <>
-        <Navbar/>
 
         <section className="mt-20 w-[max-content] mx-auto flex flex-col items-center text-center">
             <div className="flex items-center justify-center">
@@ -73,7 +71,6 @@ const FAQs = () => {
                 </div>
             </div>
         </section>
-        <Footer/>
     </>
 }
 
