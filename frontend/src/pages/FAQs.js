@@ -1,6 +1,5 @@
 import React from 'react'
 import FAQsCard from "../components/FAQs"
-import Footer from "../components/footer"
 
 const FAQSData = [
     {

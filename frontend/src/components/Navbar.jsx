@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "../App.css";
 import logo from "../assets/images/logo.png";
-import { Transition } from "@headlessui/react";
+// import { Transition } from "@headlessui/react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div>
@@ -14,51 +15,18 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4 text-matic">
-              <a
-                href="/"
-                className=" hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Home
-              </a>
+             
+              <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+              <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium">Transfer</Link>
+              <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium">About Us</Link>
+              <Link to="/FAQs" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium">FAQs</Link>
+              <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium">Support</Link>
+              <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium">Login</Link>
 
-              <a
-                href="/"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Transfer
-              </a>
-
-              <a
-                href="/"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                About us
-              </a>
-
-              <a
-                href="/FAQs"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                FAQS
-              </a>
-
-              <a
-                href="/"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Support
-              </a>
-
-              <a
-                href="/"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Login
-              </a>
             </div>
           </div>
 
-          <div className="-mr-2 flex md:hidden">
+          {/* <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -101,11 +69,11 @@ const Navbar = () => {
                 </svg>
               )}
             </button>
-          </div>
+          </div> */}
           {/* </div>
           </div> */}
 
-          <Transition
+          {/* <Transition
             show={isOpen}
             enter="transition ease-out duration-100 transform"
             enterFrom="opacity-0 scale-95"
@@ -158,7 +126,7 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-          </Transition>
+          </Transition> */}
         </nav>
       </div>
     </>
