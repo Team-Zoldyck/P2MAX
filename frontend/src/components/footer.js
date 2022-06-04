@@ -9,10 +9,10 @@ const Footer = () => {
             <div className="h-[10rem]">
                 <h5 className="font-bold text-[1.5rem] mb-5">Company</h5>
 
-                    <a className="block mb-3">About Us</a>                
-                    <a className="block mb-3">Privacy</a>                
-                    <a className="block mb-3">Terms</a>                
-                    <a className="block mb-3">Legal</a>   
+                    <a className="block mb-3" href="/">About Us</a>                
+                    <a className="block mb-3" href="/">Privacy</a>                
+                    <a className="block mb-3" href="/">Terms</a>                
+                    <a className="block mb-3" href="/">Legal</a>   
 
             </div>
 
