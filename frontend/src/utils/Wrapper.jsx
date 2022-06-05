@@ -2,10 +2,10 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/footer"
 import RoutesComponent from "../routes/RoutesComponent"
 
-const Wrapper = () => {
+const Wrapper = ({ user }) => {
   return (
     <div>
-        <Navbar />
+        <Navbar user={user}/>
         <RoutesComponent />
         <Footer />
     </div>

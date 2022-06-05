@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Wrapper from "./utils/Wrapper";
+
 function App() {
+
+  const [user, setUser] = useState({});
+
   return (
     <>
-      <Wrapper />
+      <Wrapper user={user}/>
     </>
   );
 }
