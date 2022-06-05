@@ -7,6 +7,7 @@ import { FaRegBell } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import { MdOutlineHome, MdOutlinePersonOutline } from "react-icons/md";
 import { RiBankLine } from "react-icons/ri";
+import { BiWalletAlt } from "react-icons/bi";
 import profile_image from "../assets/images/profile-image.png";
 
 const Navbar = ({ user }) => {
@@ -24,6 +25,17 @@ const Navbar = ({ user }) => {
             <div className="ml-10 flex justify-center items-center space-x-4 text-matic">
               <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
               <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
+              {
+                (user)
+                ?
+                (
+                  <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
+                )
+                :
+                (
+                  ''
+                )
+              }
               <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
               <Link to="/FAQs" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
               <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
