@@ -3,26 +3,32 @@ import FAQsCard from "../components/FAQs"
 
 const FAQSData = [
     {
+        id: 1,
         title: "What is P2Max?",
         description: ""
     },
     {
+        id: 2,
         title: "How many countries does P2Max operate in?",
         description: "P2Max is present in 19 countries in Africa. We are looking to further increase our reach and influence as we grow."
     },
     {
+        id: 3,
         title: "What are the benefits of having an account?",
         description: ""
     },
     {
+        id: 4,
         title: "What kind of debit cards can I use on P2Max?",
         description: ""
     },
     {
+        id: 5,
         title: "How safe is my wallet?",
         description: ""
     },
     {
+        id: 6,
         title: "Are there transaction limits on a P2Max account?",
         description: ""
     }
@@ -54,8 +60,8 @@ const FAQs = () => {
 
             <div className="w-[max-content] mt-20">
                 {
-                    FAQSData?.map(({ title, description }) => {
-                        return <FAQsCard FAQ={ title } description={ description }/>
+                    FAQSData?.map(({ title, description, id }) => {
+                        return <FAQsCard key={ id } FAQ={ title } description={ description }/>
                     })
                 }
             </div>

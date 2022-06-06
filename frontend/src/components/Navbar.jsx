@@ -23,22 +23,22 @@ const Navbar = ({ user }) => {
           </Link>
           <div className="hidden md:block">
             <div className="ml-10 flex justify-center items-center space-x-4 text-matic">
-              <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
-              <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
+              <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
+              <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
               {
                 (user)
                 ?
                 (
-                  <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
+                  <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
                 )
                 :
                 (
                   ''
                 )
               }
-              <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
-              <Link to="/FAQs" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
-              <Link to="/" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
+              <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
+              <Link to="/FAQs" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
+              <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
               {
                 (user)
                 ?
@@ -55,7 +55,7 @@ const Navbar = ({ user }) => {
                 )
                 :
                 (
-                  <Link to="/login" className="hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Login</Link>
+                  <Link to="/login" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Login</Link>
                 )
               }
             </div>
