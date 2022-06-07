@@ -2,15 +2,18 @@
 import { Link } from 'react-router-dom';
 import "../App.css";
 import logo from "../assets/images/logo.png";
-// import { Transition } from "@headlessui/react";
+import { Transition } from "@headlessui/react";
 import { FaRegBell } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import { MdOutlineHome, MdOutlinePersonOutline } from "react-icons/md";
 import { RiBankLine } from "react-icons/ri";
 import { BiWalletAlt } from "react-icons/bi";
 import profile_image from "../assets/images/profile-image.png";
+import { useState } from 'react';
 
 const Navbar = ({ user }) => {
+
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -60,6 +63,102 @@ const Navbar = ({ user }) => {
               }
             </div>
           </div>
+          <div className="-mr-2 flex md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              type="button"
+              className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-matic hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              {!isOpen ? (
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
+          {/* </div>
+          </div> */}
+
+          <Transition
+            show={isOpen}
+            enter="transition ease-out duration-100 transform"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
+            leave="transition ease-in duration-75 transform"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
+          >
+            <div className="md:hidden" id="mobile-menu">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-matic">
+                <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
+                <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
+                {
+                  (user)
+                  ?
+                  (
+                    <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
+                  )
+                  :
+                  (
+                    ''
+                  )
+                }
+                <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
+                <Link to="/faqs" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
+                <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
+                {
+                  (user)
+                  ?
+                  (
+                    <>
+                      <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium"><FaRegBell size='1.2em' /></Link>
+                      <Link to="/" className="px-3 py-2 rounded-md font-bold flex justify-center items-center">
+                        <div className='mr-1'>
+                            <img src={profile_image} alt='Profile_Picture'/>
+                        </div>
+                        <FiChevronDown size='1.2em'/>
+                      </Link>
+                    </>
+                  )
+                  :
+                  (
+                    <Link to="/login" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Login</Link>
+                  )
+                }
+              </div>
+            </div>
+          </Transition>
         </nav>
       </div>
     </>
