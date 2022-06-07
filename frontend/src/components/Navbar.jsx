@@ -15,6 +15,51 @@ const Navbar = ({ user }) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const NavLinks = () => {
+
+    return(
+      <>
+        <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
+        <Link to="/transfer" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
+        {
+          (user)
+          ?
+          (
+            <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
+          )
+          :
+          (
+            ''
+          )
+        }
+        <Link to="/about" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
+        <Link to="/faqs" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
+        <Link to="/support" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
+        {
+          (user)
+          ?
+          (
+            <>
+              <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium"><FaRegBell size='1.2em' /></Link>
+              <Link to="/profile" className="px-3 py-2 rounded-md font-bold flex justify-center items-center">
+                <div className='mr-1'>
+                    <img src={profile_image} alt='Profile_Picture'/>
+                </div>
+                <FiChevronDown size='1.2em'/>
+              </Link>
+            </>
+          )
+          :
+          (
+            <Link to="/login" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Login</Link>
+          )
+        }
+      </>
+    )
+  }
+
+
+
   return (
     <>
       <div>
@@ -26,41 +71,7 @@ const Navbar = ({ user }) => {
           </Link>
           <div className="hidden md:block">
             <div className="ml-10 flex justify-center items-center space-x-4 text-matic">
-              <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
-              <Link to="/transfer" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
-              {
-                (user)
-                ?
-                (
-                  <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
-                )
-                :
-                (
-                  ''
-                )
-              }
-              <Link to="/about" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
-              <Link to="/faqs" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
-              <Link to="/support" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
-              {
-                (user)
-                ?
-                (
-                  <>
-                    <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium"><FaRegBell size='1.2em' /></Link>
-                    <Link to="/profile" className="px-3 py-2 rounded-md font-bold flex justify-center items-center">
-                      <div className='mr-1'>
-                          <img src={profile_image} alt='Profile_Picture'/>
-                      </div>
-                      <FiChevronDown size='1.2em'/>
-                    </Link>
-                  </>
-                )
-                :
-                (
-                  <Link to="/login" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Login</Link>
-                )
-              }
+              <NavLinks />
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
@@ -121,41 +132,7 @@ const Navbar = ({ user }) => {
           >
             <div className="md:hidden" id="mobile-menu">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-matic">
-                <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
-                <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
-                {
-                  (user)
-                  ?
-                  (
-                    <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
-                  )
-                  :
-                  (
-                    ''
-                  )
-                }
-                <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
-                <Link to="/faqs" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
-                <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
-                {
-                  (user)
-                  ?
-                  (
-                    <>
-                      <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium"><FaRegBell size='1.2em' /></Link>
-                      <Link to="/" className="px-3 py-2 rounded-md font-bold flex justify-center items-center">
-                        <div className='mr-1'>
-                            <img src={profile_image} alt='Profile_Picture'/>
-                        </div>
-                        <FiChevronDown size='1.2em'/>
-                      </Link>
-                    </>
-                  )
-                  :
-                  (
-                    <Link to="/login" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Login</Link>
-                  )
-                }
+                <NavLinks />
               </div>
             </div>
           </Transition>
