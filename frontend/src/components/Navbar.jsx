@@ -1,63 +1,79 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "../App.css";
 import logo from "../assets/images/logo.png";
 import { Transition } from "@headlessui/react";
+import { FaRegBell } from "react-icons/fa";
+import { FiChevronDown } from "react-icons/fi";
+import { MdOutlineHome, MdOutlinePersonOutline } from "react-icons/md";
+import { RiBankLine } from "react-icons/ri";
+import { BiWalletAlt } from "react-icons/bi";
+import profile_image from "../assets/images/profile-image.png";
+import { useState } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
+
   const [isOpen, setIsOpen] = useState(false);
+
+  const NavLinks = () => {
+
+    return(
+      <>
+        <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
+        <Link to="/transfer" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
+        {
+          (user)
+          ?
+          (
+            <Link to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
+          )
+          :
+          (
+            ''
+          )
+        }
+        <Link to="/about" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
+        <Link to="/faqs" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
+        <Link to="/support" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
+        {
+          (user)
+          ?
+          (
+            <>
+              <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium"><FaRegBell size='1.2em' /></Link>
+              <Link to="/profile" className="px-3 py-2 rounded-md font-bold flex justify-center items-center">
+                <div className='mr-1'>
+                    <img src={profile_image} alt='Profile_Picture'/>
+                </div>
+                <FiChevronDown size='1.2em'/>
+              </Link>
+            </>
+          )
+          :
+          (
+            <Link to="/login" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Login</Link>
+          )
+        }
+      </>
+    )
+  }
+
+
+
   return (
     <>
       <div>
         <nav className="bg-white w-full flex items-center justify-between py-4 px-16 shadow-nav text-matic">
-          <div className="flex-shrink-0">
-            <img src={logo} alt="Logo" />
-          </div>
+          <Link to="/">
+            <div className="flex-shrink-0">
+              <img src={logo} alt="Logo" />
+            </div>
+          </Link>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4 text-matic">
-              <a
-                href="/"
-                className=" hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Home
-              </a>
-
-              <a
-                href="/"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Transfer
-              </a>
-
-              <a
-                href="/"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                About us
-              </a>
-
-              <a
-                href="/FAQs"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                FAQS
-              </a>
-
-              <a
-                href="/"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Support
-              </a>
-
-              <a
-                href="/login"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Login
-              </a>
+            <div className="ml-10 flex justify-center items-center space-x-4 text-matic">
+              <NavLinks />
             </div>
           </div>
-
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -116,46 +132,7 @@ const Navbar = () => {
           >
             <div className="md:hidden" id="mobile-menu">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-matic">
-                <a
-                  href="/"
-                  className="hover:bg-gray-700  block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Home
-                </a>
-
-                <a
-                  href="/"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Transfers
-                </a>
-
-                <a
-                  href="/"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  About Us
-                </a>
-
-                <a
-                  href="/"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  FAQS
-                </a>
-
-                <a
-                  href="/"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Support
-                </a>
-                <a
-                  href="/"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Login
-                </a>
+                <NavLinks />
               </div>
             </div>
           </Transition>
