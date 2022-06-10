@@ -17,24 +17,28 @@ const Navbar = ({ user }) => {
 
   const NavLinks = () => {
 
+    const closeNavbar = () => {
+      (isOpen) && setIsOpen(false);
+    }
+
     return(
       <>
-        <Link onClick={() => setIsOpen(false)} to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
-        <Link onClick={() => setIsOpen(false)} to="/transfer" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
+        <Link onClick={closeNavbar} to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
+        <Link onClick={closeNavbar} to="/transfer" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
         {
           (user)
           ?
           (
-            <Link onClick={() => setIsOpen(false)} to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
+            <Link onClick={closeNavbar} to="/wallet" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
           )
           :
           (
             ''
           )
         }
-        <Link onClick={() => setIsOpen(false)} to="/about" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
-        <Link onClick={() => setIsOpen(false)} to="/faqs" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
-        <Link onClick={() => setIsOpen(false)} to="/support" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
+        <Link onClick={closeNavbar} to="/about" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
+        <Link onClick={closeNavbar} to="/faqs" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
+        <Link onClick={closeNavbar} to="/support" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
         {
           (user)
           ?
@@ -51,7 +55,7 @@ const Navbar = ({ user }) => {
           )
           :
           (
-            <Link onClick={() => setIsOpen(false)} to="/login" className="hover:bg-[#41DC65] bg-[#2B54E4] text-[#fff] px-5 py-3 rounded-md text-xs tracking-tight leading-3 font-bold">Login</Link>
+            <Link onClick={closeNavbar} to="/login" className="hover:bg-[#41DC65] bg-[#2B54E4] text-[#fff] px-5 py-3 rounded-md text-xs tracking-tight leading-3 font-bold">Login</Link>
           )
         }
       </>
@@ -63,7 +67,7 @@ const Navbar = ({ user }) => {
   return (
     <>
       <div>
-        <nav className={`relative bg-white w-full  ${(isOpen) ? 'h-screen py-20 justify-center items-start' : 'px-8 py-4 justify-between items-center'} flex  px-8 shadow-nav text-matic`}>
+        <nav className={`relative bg-white w-full ${(isOpen) ? 'h-screen py-20 justify-center items-start' : 'px-8 py-4 justify-between items-center'} flex  px-8 shadow-nav text-matic`}>
           <Link to="/">
             <div className={`flex-shrink-0 ${(isOpen) ? 'absolute top-4 left-8' : ''}`}>
               <img src={logo} alt="Logo" />
