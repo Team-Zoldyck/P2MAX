@@ -73,12 +73,12 @@ const Navbar = ({ user }) => {
               <img src={logo} alt="Logo" />
             </div>
           </Link>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="ml-10 flex justify-center items-center space-x-4 text-matic">
               <NavLinks />
             </div>
           </div>
-          <div className="-mr-2 flex md:hidden">
+          <div className="-mr-2 flex lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -134,7 +134,7 @@ const Navbar = ({ user }) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className={`md:hidden w-screen h-1/2 ${(isOpen) ? 'flex justify-items-start items-center' : ''} `} id="mobile-menu">
+            <div className={`lg:hidden w-screen h-1/2 ${(isOpen) ? 'flex justify-items-start items-center' : ''} `} id="mobile-menu">
               <div className="h-full w-full flex flex-col items-center justify-between px-2 pt-2 pb-3 space-y-1 sm:px-3 text-matic mobile">
                 <NavLinks />
               </div>
