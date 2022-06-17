@@ -1,7 +1,5 @@
 import React from 'react'
-import BackToTopButton from '../components/BackToTopButton'
 import FAQsCard from "../components/FAQs"
-import OptIn from '../components/OptIn'
 
 const FAQSData = [
     {
@@ -67,10 +65,6 @@ const FAQs = () => {
                     })
                 }
             </div>
-
-            <OptIn />
-
-            <BackToTopButton />
             
         </section>
     </>

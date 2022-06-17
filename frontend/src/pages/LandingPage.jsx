@@ -5,8 +5,6 @@ import hero_ellipse from "../assets/images/hero_ellipse.png";
 import fast_transfer from "../assets/images/fast_transfer.png";
 import security from "../assets/images/security.png";
 import scheduler from "../assets/images/scheduler.png";
-import BackToTopButton from "../components/BackToTopButton";
-import OptIn from "../components/OptIn";
 
 const LandingPage = () => {
   return (
@@ -84,10 +82,6 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-
-      <OptIn />
-
-      <BackToTopButton />
     </div>
   );
 };
