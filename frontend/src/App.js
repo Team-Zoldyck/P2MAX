@@ -9,7 +9,7 @@ import RoutesComponent from "./routes/RoutesComponent";
 
 function App() {
 
-  const [user, setUser] = useState();
+  const [user, setUser] = useState({});
   
   const pathname = useLocation().pathname.split('/');
   let route = pathname[1];

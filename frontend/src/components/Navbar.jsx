@@ -46,7 +46,7 @@ const Navbar = ({ user }) => {
           ?
           (
             <>
-              <Link to="/" className={`px-3 ${(isOpen) ? 'py-5 mt-[0px]' : 'py-2'} rounded-md text-sm font-medium`}><FaRegBell size='1.2em' /></Link>
+              <Link onClick={closeNavbar} to="/notifications" className={`px-3 ${(isOpen) ? 'py-5 mt-[0px]' : 'py-2'} rounded-md text-sm font-medium`}><FaRegBell size='1.2em' /></Link>
               <Link to="/profile" className={`px-3 ${(isOpen) ? 'py-5 mt-[0px]' : 'py-2'} rounded-md font-bold flex justify-center items-center`}>
                 <div className='mr-1'>
                     <img src={profile_image} alt='Profile_Picture'/>
