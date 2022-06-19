@@ -21,31 +21,33 @@ const Navbar = ({ user }) => {
       (isOpen) && setIsOpen(false);
     }
 
+    let linkStyle = `hover:text-[#41DC65] text-[#05377F] px-3  ${(isOpen) ? 'py-5 mt-[0px]' : 'py-2'} rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center`
+
     return(
       <>
-        <Link onClick={closeNavbar} to="/" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
-        <Link onClick={closeNavbar} to="/transfer" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
+        <Link onClick={closeNavbar} to="/" className={linkStyle}><MdOutlineHome className='mr-[1px]' size='1.2em'/> Home</Link>
+        <Link onClick={closeNavbar} to="/transfer" className={linkStyle}><RiBankLine className='mr-[2px]' size='1.2em'/> Transfer</Link>
         {
           (user)
           ?
           (
-            <Link onClick={closeNavbar} to="/wallet" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
+            <Link onClick={closeNavbar} to="/wallet" className={linkStyle}><BiWalletAlt className='mr-[1px]' size='1.2em'/> Wallet</Link>
           )
           :
           (
             ''
           )
         }
-        <Link onClick={closeNavbar} to="/about" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold flex justify-center items-center"><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
-        <Link onClick={closeNavbar} to="/faqs" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">FAQs</Link>
-        <Link onClick={closeNavbar} to="/support" className="hover:text-[#41DC65] text-[#05377F] px-3 py-2 rounded-md text-xs tracking-tight leading-3 font-bold">Support</Link>
+        <Link onClick={closeNavbar} to="/about" className={linkStyle}><MdOutlinePersonOutline className='mr-[1px]' size='1.2em'/> About Us</Link>
+        <Link onClick={closeNavbar} to="/faqs" className={`hover:text-[#41DC65] text-[#05377F] px-3 ${(isOpen) ? 'py-5 mt-[0px]' : 'py-2'} rounded-md text-xs tracking-tight leading-3 font-bold`}>FAQs</Link>
+        <Link onClick={closeNavbar} to="/support" className={`hover:text-[#41DC65] text-[#05377F] px-3 ${(isOpen) ? 'py-7 mt-[0px]' : 'py-2'} rounded-md text-xs tracking-tight leading-3 font-bold`}>Support</Link>
         {
           (user)
           ?
           (
             <>
-              <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium"><FaRegBell size='1.2em' /></Link>
-              <Link to="/profile" className="px-3 py-2 rounded-md font-bold flex justify-center items-center">
+              <Link onClick={closeNavbar} to="/notifications" className={`px-3 ${(isOpen) ? 'py-5 mt-[0px]' : 'py-2'} rounded-md text-sm font-medium`}><FaRegBell size='1.2em' /></Link>
+              <Link to="/profile" className={`px-3 ${(isOpen) ? 'py-5 mt-[0px]' : 'py-2'} rounded-md font-bold flex justify-center items-center`}>
                 <div className='mr-1'>
                     <img src={profile_image} alt='Profile_Picture'/>
                 </div>
@@ -55,7 +57,7 @@ const Navbar = ({ user }) => {
           )
           :
           (
-            <Link onClick={closeNavbar} to="/login" className="hover:bg-[#41DC65] bg-[#2B54E4] text-[#fff] px-5 py-3 rounded-md text-xs tracking-tight leading-3 font-bold">Login</Link>
+            <Link onClick={closeNavbar} to="/login" className={`hover:bg-[#41DC65] bg-[#2B54E4] text-[#fff] px-5  ${(isOpen) ? 'py-5 my-[10px] w-full flex justify-center items-center' : 'py-3'} rounded-md text-xs tracking-tight leading-3 font-bold`}>Login</Link>
           )
         }
       </>
@@ -67,18 +69,18 @@ const Navbar = ({ user }) => {
   return (
     <>
       <div>
-        <nav className={`relative bg-white w-full ${(isOpen) ? 'h-screen py-20 justify-center items-start' : 'px-8 py-4 justify-between items-center'} flex  px-8 shadow-nav text-matic`}>
+        <nav className={`w-full ${(isOpen) ? 'bg-[#ffffffed] absolute top-[0] bottom-[0] left-[0] right-[0] z-[5] py-20 justify-center items-start' : 'bg-white relative px-8 py-4 justify-between items-center'} flex  px-8 shadow-nav text-matic`}>
           <Link to="/">
             <div className={`flex-shrink-0 ${(isOpen) ? 'absolute top-4 left-8' : ''}`}>
               <img src={logo} alt="Logo" />
             </div>
           </Link>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="ml-10 flex justify-center items-center space-x-4 text-matic">
               <NavLinks />
             </div>
           </div>
-          <div className="-mr-2 flex md:hidden">
+          <div className="-mr-2 flex lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -134,7 +136,7 @@ const Navbar = ({ user }) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className={`md:hidden w-screen h-1/2 ${(isOpen) ? 'flex justify-items-start items-center' : ''} `} id="mobile-menu">
+            <div className={`lg:hidden w-screen h-fit ${(isOpen) ? 'flex justify-items-start items-center' : ''} `} id="mobile-menu">
               <div className="h-full w-full flex flex-col items-center justify-between px-2 pt-2 pb-3 space-y-1 sm:px-3 text-matic mobile">
                 <NavLinks />
               </div>

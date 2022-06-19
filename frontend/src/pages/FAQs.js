@@ -65,16 +65,7 @@ const FAQs = () => {
                     })
                 }
             </div>
-
-            <div className="mt-[8rem] mb-12 rounded-xl px-12 py-5 mx-auto bg-subtle w-[max-content] text-left text-matic">
-                <h3 className="text-[1.25rem] font-bold mb-1">Receive updates</h3>
-                <p>Be the first to receive information about our activities.</p>
-
-                <div className="p-4 bg-[#CDD7E5] mt-5 flex rounded-lg">
-                    <input type="email" placeholder="Your email address" className="rounded-l-lg h-[2.5rem] w-[80%] px-4 outline-none"/>
-                    <button className="w-[20%] bg-secondary rounded-lg text-white ml-[-.3rem]">opt in</button>
-                </div>
-            </div>
+            
         </section>
     </>
 }
