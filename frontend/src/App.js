@@ -7,12 +7,18 @@ import Navbar from "./components/Navbar";
 import OptIn from "./components/OptIn";
 import RoutesComponent from "./routes/RoutesComponent";
 
+import {  animateScroll as scroll } from 'react-scroll';
+
 function App() {
 
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState();
   
   const pathname = useLocation().pathname.split('/');
   let route = pathname[1];
+
+  const onScrollToTop = () => {
+    scroll.scrollToTop();
+  }
 
   const checkRoute = (data) => {
     switch (data) {
@@ -29,7 +35,7 @@ function App() {
   const OptionalComponents = () => {
     return (
       <>
-        <BackToTopButton />
+        <BackToTopButton onScrollToTop={onScrollToTop}/>
         <OptIn />
         <Footer />
       </>
