@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "../components/Navbar";
-//import Login from "../authentication/Login";
 import LandingPage from "../pages/LandingPage";
 import Transaction from "../pages/transfer/Transaction";
 import Support from "../pages/Support";
