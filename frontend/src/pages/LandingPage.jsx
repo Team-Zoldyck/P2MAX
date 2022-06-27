@@ -95,7 +95,7 @@ const LandingPage = () => {
           <p className="mt-5 font-sans font-normal text-base leading-[22px] ">
             P2Max is devoted to providing value to our customers and leaving a
             lasting impression through our services. Our emphasis is on a
-            <span className="text-[#41DC65]">value-based approach</span> to
+            <span className="text-[#41DC65] ml-1">value-based approach</span> to
             providing <span className="text-[#41DC65]">innovative</span>{" "}
             solutions to money transfer.
           </p>
