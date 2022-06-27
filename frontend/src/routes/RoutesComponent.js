@@ -13,7 +13,6 @@ import Login from "../pages/Login";
 function RoutesComponent() {
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<About />} />
