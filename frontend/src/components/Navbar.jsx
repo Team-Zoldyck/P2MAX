@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       <div>
-        <nav className="bg-white w-full flex items-center justify-between py-4 px-16 shadow-nav text-matic">
+        <nav className="bg-white w-full flex items-center justify-between py-4 sm:px-16 shadow-nav text-matic px-10">
           <div className="flex-shrink-0">
             <img src={logo} alt="Logo" />
           </div>
