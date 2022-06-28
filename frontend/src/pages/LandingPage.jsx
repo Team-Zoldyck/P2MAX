@@ -5,11 +5,13 @@ import hero_ellipse from "../assets/images/hero_ellipse.png";
 import fast_transfer from "../assets/images/fast_transfer.png";
 import security from "../assets/images/security.png";
 import scheduler from "../assets/images/scheduler.png";
+import about_image_1 from "../assets/images/about_image_1.png";
+import rafiki_2 from "../assets/images/rafiki.png"
 
 const LandingPage = () => {
   return (
-    <div>
-      <div className="flex flex-col md:flex-row  gap-6 py-20 px-20 justify-center items-center relative">
+    <>
+      <section className="flex flex-col md:flex-row  gap-6 py-20 px-20 justify-center items-center relative">
         <div>
           <h1 className="text-3xl md:text-5xl font-bold">
             With P2Max, you can
@@ -40,9 +42,9 @@ const LandingPage = () => {
         <div className="md:mt-6">
           <img src={rafiki_hero} alt="hero_img" />
         </div>
-      </div>
+      </section>
 
-      <div className=" py-20 px-20 justify-center items-center relative">
+      <section className=" py-20 px-20 justify-center items-center relative">
         <h1 className="text-3xl md:text-5xl font-bold text-center">
           What Makes P2Max Standout
         </h1>
@@ -81,8 +83,58 @@ const LandingPage = () => {
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <section className="flex flex-col md:flex-row justify-around items-center bg-[#F7F7FA] py-[4rem]">
+        <img src={about_image_1} alt="about" />
+        <div className="w-[458px]">
+          <span className="bg-[#D9F8E0] py-[8px] px-[24px] ">ABOUT US </span>
+          <h1 className="mt-[3.5rem] font-sans font-bold text-[32px] leadong-[38px] ">
+            More than a financial service
+          </h1>
+          <p className="mt-5 font-sans font-normal text-base leading-[22px] ">
+            P2Max is devoted to providing value to our customers and leaving a
+            lasting impression through our services. Our emphasis is on a
+            <span className="text-[#41DC65] ml-1">value-based approach</span> to
+            providing <span className="text-[#41DC65]">innovative</span>{" "}
+            solutions to money transfer.
+          </p>
+          <p className="mt-5 font-sans font-normal text-base leading-[22px] ">
+            Being solid advocates for a greener and safer earth, we are also
+            carbon neutral within all services we provide.
+          </p>
+          <button className="font-bold w-[131px] h-[38px] text-[12px] leading-[14px] py-[12px] px-[20px] bg-[#2B54E4] rounded-[4px] mt-6 text-white">
+            Read More
+          </button>
+        </div>
+      </section>
+
+      <section className="flex flex-col md:flex-row justify-around items-center py-[4rem]">
+        <div className="w-[458px]">
+          <span className="bg-[#D9F8E0] py-[8px] px-[24px] uppercase">
+            frequently asked questions{" "}
+          </span>
+          <h1 className="mt-[3.5rem] font-sans font-bold text-[32px] leadong-[38px] ">
+            “Hi there. I would love some more information about......”
+          </h1>
+          <p className="mt-5 font-sans font-normal text-base leading-[22px] ">
+            Hey there. We do understand that you might have questions as regards
+            what we do, who we are, or something outside this category. Chances
+            are that someone has also asked us the same question too.
+          </p>
+          <p className="mt-5 font-sans font-normal text-base leading-[22px] ">
+            Click on the button below to access our Frequently Asked Questions
+            where answers might be waiting for you. And if they are not, you can
+            always contact us.
+          </p>
+          <button className="font-bold w-[244px] h-[38px] text-[12px] leading-[14px] py-[12px] px-[20px] bg-[#2B54E4] rounded-[4px] mt-6 text-white">
+          CLICK TO GET ANSWERS
+          </button>
+        </div>
+        <img src={rafiki_2} alt="about" />
+
+      </section>
+    </>
   );
 };
 

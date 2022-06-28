@@ -11,7 +11,7 @@ import {  animateScroll as scroll } from 'react-scroll';
 
 function App() {
 
-  const [user, setUser] = useState();
+  const [user] = useState();
   
   const pathname = useLocation().pathname.split('/');
   let route = pathname[1];

@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import LandingPage from "../pages/LandingPage";
 import Transaction from "../pages/transfer/Transaction";
 import Support from "../pages/Support";
@@ -13,7 +12,6 @@ import Login from "../pages/Login";
 function RoutesComponent() {
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<About />} />
