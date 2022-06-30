@@ -1,6 +1,6 @@
 import React from "react";
-import Send from "../../components/Send";
-import Request from "../../components/Request";
+import Send from "../../components/transaction/Send";
+import Request from "../../components/transaction/Request";
 
 const Transaction = () => {
   return (
