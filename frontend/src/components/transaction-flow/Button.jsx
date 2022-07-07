@@ -6,7 +6,7 @@ const Button = ({ type = "submit", className = "", children, onClick }) => {
       type={type}
       onClick={onClick}
       className={
-        `w-full  mb-10 items-center px-4 py-2 bg-blue border border-transparent rounded-md text-xs text-white uppercase` +
+        `w-full bg-[#2B54E4]  mb-10 items-center px-4 py-2 bg-blue border border-transparent rounded-md text-xs text-white uppercase` +
         className
       }
     >

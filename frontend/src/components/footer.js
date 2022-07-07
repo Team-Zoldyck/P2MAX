@@ -2,6 +2,7 @@ const Footer = () => {
     return (
         <div className="h-fit p-12 py-20 bg-secondary text-white flex flex-col sm:flex-row items-start justify-between">
             <div className="h-fit mb-[50px]">
+
                 <h5 className="font-bold text-[1.5rem] mb-5">P2Max</h5>
                 <span>1/3 Pound Road, Aba</span>
             </div>

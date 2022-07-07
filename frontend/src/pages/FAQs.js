@@ -1,169 +1,72 @@
-import React, { useState } from "react";
-import "../App.css";
-import logo from "../assets/images/logo.png";
-import { Transition } from "@headlessui/react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import FAQsCard from "../components/FAQs"
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <>
-      <div>
-        <nav className="bg-white w-full flex items-center justify-between py-4 px-16 shadow-nav text-matic">
-          <div className="flex-shrink-0">
-            <img src={logo} alt="Logo" />
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4 text-matic">
-              <Link
-                to="/"
-                className=" hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Home
-              </Link>
+const FAQSData = [
+    {
+        id: 1,
+        title: "What is P2Max?",
+        description: ""
+    },
+    {
+        id: 2,
+        title: "How many countries does P2Max operate in?",
+        description: "P2Max is present in 19 countries in Africa. We are looking to further increase our reach and influence as we grow."
+    },
+    {
+        id: 3,
+        title: "What are the benefits of having an account?",
+        description: ""
+    },
+    {
+        id: 4,
+        title: "What kind of debit cards can I use on P2Max?",
+        description: ""
+    },
+    {
+        id: 5,
+        title: "How safe is my wallet?",
+        description: ""
+    },
+    {
+        id: 6,
+        title: "Are there transaction limits on a P2Max account?",
+        description: ""
+    }
+]
 
-              <Link
-                to="/transfers"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Transfer
-              </Link>
+const FAQs = () => {
+    return <>
 
-              <Link
-                to="/about"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                About us
-              </Link>
-
-              <Link
-                to="/faqs"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                FAQS
-              </Link>
-
-              <Link
-                to="/support"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Support
-              </Link>
-
-              <Link
-                to="/login"
-                className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Login
-              </Link>
-            </div>
-          </div>
-
-          <div className="-mr-2 flex md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              type="button"
-              className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-matic hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              {!isOpen ? (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
+        <section className="mt-20 sm:w-[max-content] mx-auto flex flex-col sm:items-center sm:text-center w-[90%]">
+            <div className="flex sm:items-center sm:justify-center">
+                <svg width="35" height="30" viewBox="0 0 35 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="sm:ml-[-6rem] sm:mr-[4.5rem] sm:w-[2.5rem] sm:h-[2.5rem] w-[1.5rem] h-[1.5rem] mr-4 ml-3">
+                    <circle r="6" transform="matrix(-1 0 0 1 29 24)" fill="#D9F8E0" />
+                    <ellipse rx="10.5" ry="10" transform="matrix(-1 0 0 1 10.5 10)" fill="#F3E0FF" />
                 </svg>
-              ) : (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
-          {/* </div>
-          </div> */}
 
-          <Transition
-            show={isOpen}
-            enter="transition ease-out duration-100 transform"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
-            leave="transition ease-in duration-75 transform"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
-          >
-            <div className="md:hidden" id="mobile-menu">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-matic">
-                <a
-                  href="/"
-                  className="hover:bg-gray-700  block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Home
-                </a>
-
-                <a
-                  href="/"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Transfers
-                </a>
-
-                <a
-                  href="/"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  About Us
-                </a>
-
-                <a
-                  href="/"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  FAQS
-                </a>
-
-                <a
-                  href="/"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Support
-                </a>
-                <a
-                  href="/"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Login
-                </a>
-              </div>
+                <h1 className="text-matic sm:text-3xl text-[1.1rem] font-bold">Frequently Asked Questions</h1>
             </div>
-          </Transition>
-        </nav>
-      </div>
+
+            <form>
+                <div className="bg-subtle mt-10 sm:w-[32rem] sm:h-[3rem] flex sm:items-center sm:px-10 rounded-lg w-[100%] h-[2.2rem] px-5">
+                    <button type="" className="mr-5"> 
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.55055 12.4468 8.05071 12.9999 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0V0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z" fill="#AABBF4" />
+                        </svg>
+                    </button>
+                    <input type="search" className="w-[100%] h-[100%] outline-none bg-subtle" placeholder="Search your question here"/>
+                </div>
+            </form>
+
+            <div className="sm:w-[max-content] w-[90%] mt-20 mx-auto">
+                {
+                    FAQSData?.map(({ title, description, id }) => {
+                        return <FAQsCard key={ id } FAQ={ title } description={ description }/>
+                    })
+                }
+            </div>
+        </section>
     </>
-  );
-};
+}
 
-export default Navbar;
+export default FAQs

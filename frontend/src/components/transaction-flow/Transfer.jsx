@@ -1,5 +1,5 @@
 import React from "react";
-import TransferIcon from "../assets/images/transferIcon.png";
+import TransferIcon from "../../assets/images/transferIcon.png";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
@@ -15,11 +15,9 @@ const Transfer = (props) => {
   const { title, text, check } = props;
   let history = useNavigate();
   const handleSendMoney = () => {
-    console.log("send money");
     history("/sendmoney");
   };
   const handleRequestMoney = () => {
-    console.log("request money");
     history("/requestmoney");
   };
   return (
