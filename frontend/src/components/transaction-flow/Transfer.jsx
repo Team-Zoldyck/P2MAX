@@ -36,12 +36,17 @@ const Transfer = (props) => {
       <div className="w-full">
         <p className="mb-12 font-normal text-base">{text}</p>
       </div>
-
-      {check ? (
-        <Button onClick={handleSendMoney}>Send money</Button>
-      ) : (
-        <Button onClick={handleRequestMoney}>Request money</Button>
-      )}
+      <div className="mb-10">
+        {check ? (
+          <Button color={true} onClick={handleSendMoney}>
+            Send money
+          </Button>
+        ) : (
+          <Button color={true} onClick={handleRequestMoney}>
+            Request money
+          </Button>
+        )}
+      </div>
     </div>
   );
 };
