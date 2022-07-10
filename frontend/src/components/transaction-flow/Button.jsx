@@ -16,7 +16,7 @@ const Button = ({
     secondary: {
       bColor: "bg-white",
       text: "text-[#2B54E4]",
-      border: "border-[#AABBF4]",
+      border: "border-[#2B54E4]",
     },
   };
   return (

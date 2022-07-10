@@ -13,4 +13,3 @@ const Transaction = () => {
 };
 
 export default Transaction;
-//"flex items-center justify-center"

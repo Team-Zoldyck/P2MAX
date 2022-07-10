@@ -3,11 +3,16 @@ import Input from "../../../components/transaction-flow/Input";
 import Label from "../../../components/transaction-flow/Label";
 import Button from "../../../components/transaction-flow/Button";
 import sendMoneyIcon from "../../../assets/images/sendmoney-icon.png";
+import { useNavigate } from "react-router";
 const SendMoney = () => {
+  let history = useNavigate();
+  const handleRoute = () => {
+    history("/sendmoney/confirm");
+  };
   return (
-    <div className="flex justify-center  p-10 mt-10 bg-[#F7F7FA] w-96">
+    <div className="flex content-center m-auto p-10 mt-10 bg-[#F7F7FA] w-96">
       <div className="w-full ">
-        <form classname=" w-full color-[#7979e2]">
+        <form className=" w-full color-[#7979e2]">
           <div>
             <Label>Available balance</Label>
             <div className="flex  h-auto items-center mt-7">
@@ -28,9 +33,13 @@ const SendMoney = () => {
             <Input />
           </div>
           <div className="mt-12">
-            <Button color={true}>Send money</Button>
+            <Button onClick={handleRoute} color={true}>
+              Send money
+            </Button>
             <div className="mt-3">
-              <Button color={false}>Cancel transaction</Button>
+              <Button onClick={() => history("transfer")} color={false}>
+                Cancel transaction
+              </Button>
             </div>
           </div>
         </form>

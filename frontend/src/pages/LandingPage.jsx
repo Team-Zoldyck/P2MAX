@@ -5,8 +5,10 @@ import hero_ellipse from "../assets/images/hero_ellipse.png";
 import fast_transfer from "../assets/images/fast_transfer.png";
 import security from "../assets/images/security.png";
 import scheduler from "../assets/images/scheduler.png";
+import { useNavigate } from "react-router";
 
 const LandingPage = () => {
+  let history = useNavigate();
   return (
     <div>
       <div className="flex flex-col md:flex-row  gap-6 py-20 px-20 justify-center items-center relative">
@@ -24,7 +26,11 @@ const LandingPage = () => {
             Experience money transfer in a whole new way with P2Max
           </p>
           <div className="mt-6 pb-6 text-center md:text-left md:pb-0">
-            <button className="flex justify-center items-center gap-4" id="btn">
+            <button
+              onClick={() => history("/sendmoney")}
+              className="flex justify-center items-center gap-4"
+              id="btn"
+            >
               {" "}
               <img src={hero_btn_icon} alt="hero_btn_icon" />
               SEND MONEY NOW
