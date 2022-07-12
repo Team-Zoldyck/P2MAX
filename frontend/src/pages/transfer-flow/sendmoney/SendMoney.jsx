@@ -37,7 +37,7 @@ const SendMoney = () => {
               Send money
             </Button>
             <div className="mt-3">
-              <Button onClick={() => history("transfer")} color={false}>
+              <Button onClick={() => history("/transfer")} color={false}>
                 Cancel transaction
               </Button>
             </div>
