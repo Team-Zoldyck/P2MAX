@@ -59,7 +59,7 @@ const LandingPage = () => {
           </div>
 
           <div className=" flex flex-col justify-center items-center gap-[5rem]  py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
-            <div className="flex justify-center items-center gap-5 mt-[2.6rem]">
+            <div className="flex justify-center items-center gap-5 mt-[2.59rem]">
               <img src={security} alt="security" />
               <h2 className="text-2xl  font-bold text-center">Security</h2>
             </div>
