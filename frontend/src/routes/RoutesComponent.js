@@ -6,6 +6,8 @@ import FAQs from "../pages/FAQs";
 import Register from "../pages/Register";
 import RegistrationStep from "../pages/RegistrationStep";
 
+import ForgotPassword from "../pages/ForgotPassword";
+
 function RoutesComponent() {
   return (
     <>
@@ -15,6 +17,7 @@ function RoutesComponent() {
         <Route path="login" element={<Login />} />
         <Route path="step1" element={<RegistrationStep />} />
         <Route path="FAQs" element={<FAQs />} />
+        <Route path="Forgot" element={<ForgotPassword />} />
         <Route path="register" element={<Register />} />
       </Routes>
     </>
