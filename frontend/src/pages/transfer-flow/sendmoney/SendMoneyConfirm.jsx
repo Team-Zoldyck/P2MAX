@@ -25,7 +25,7 @@ const SendMoneyConfirm = () => {
         </div>
         <div className="mt-12">
           <Label>Enter your password</Label>
-          <Input />
+          <Input type="password" />
         </div>
         <div className="mt-12">
           <Button

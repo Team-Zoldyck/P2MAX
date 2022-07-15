@@ -12,15 +12,15 @@ const RequestMoney = () => {
         <form classname=" w-full color-[#7979e2]">
           <div className="mt-12">
             <Label>Request amount</Label>
-            <Input />
+            <Input type="text" />
           </div>
           <div className="mt-12">
             <Label>User email or username</Label>
-            <Input />
+            <Input type="text" />
           </div>
           <div className="mt-12">
             <Label>Receipt email or username</Label>
-            <Input />
+            <Input type="text" />
           </div>
           <div className="mt-12">
             <Label>Narration</Label>

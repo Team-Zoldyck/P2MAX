@@ -26,11 +26,11 @@ const SendMoney = () => {
           </div>
           <div className="mt-12">
             <Label>Amount to send</Label>
-            <Input />
+            <Input type="text" />
           </div>
           <div className="mt-12">
             <Label>Receipt email or username</Label>
-            <Input />
+            <Input type="text" />
           </div>
           <div className="mt-12">
             <Button onClick={handleRoute} color={true}>

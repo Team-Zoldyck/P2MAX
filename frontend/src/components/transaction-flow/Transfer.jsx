@@ -6,12 +6,10 @@ import { useNavigate } from "react-router-dom";
 
 const buttonConfig = {
   primary: {
-    // width: "w-1/5",
-    width: "w-80",
+    width: "w-[320px]",
   },
   secondary: {
-    // width: "w-1/4",
-    width: "w-80",
+    width: "w-[325px]",
   },
 };
 const Transfer = (props) => {
@@ -43,7 +41,7 @@ const Transfer = (props) => {
         />
       )}
 
-      <h2 className="font-bold text-2xl my-12">{title}</h2>
+      <h1 className="font-bold text-3xl my-12">{title}</h1>
       <div className="w-full">
         <p className="mb-12 font-normal text-base">{text}</p>
       </div>
