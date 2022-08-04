@@ -1,16 +1,16 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import rafiki_hero from "../assets/images/rafiki_hero.png";
 import hero_btn_icon from "../assets/images/hero_btn_icon.png";
 import hero_ellipse from "../assets/images/hero_ellipse.png";
 import fast_transfer from "../assets/images/fast_transfer.png";
 import security from "../assets/images/security.png";
 import scheduler from "../assets/images/scheduler.png";
+import { useNavigate } from "react-router";
 
 const LandingPage = () => {
+  let history = useNavigate();
   return (
     <div>
-      <Navbar />
       <div className="flex flex-col md:flex-row  gap-6 py-20 px-20 justify-center items-center relative">
         <div>
           <h1 className="text-3xl md:text-5xl font-bold">
@@ -26,7 +26,11 @@ const LandingPage = () => {
             Experience money transfer in a whole new way with P2Max
           </p>
           <div className="mt-6 pb-6 text-center md:text-left md:pb-0">
-            <button className="flex justify-center items-center gap-4" id="btn">
+            <button
+              onClick={() => history("/sendmoney")}
+              className="flex justify-center items-center gap-4"
+              id="btn"
+            >
               {" "}
               <img src={hero_btn_icon} alt="hero_btn_icon" />
               SEND MONEY NOW
@@ -61,7 +65,7 @@ const LandingPage = () => {
           </div>
 
           <div className=" flex flex-col justify-center items-center gap-[5rem]  py-16 px-[60px]  w-[32rem] h-[417px] bg-[#F7F7FA] shadow-[#808080]">
-            <div className="flex justify-center items-center gap-5 mt-[2.6rem]">
+            <div className="flex justify-center items-center gap-5 mt-[2.59rem]">
               <img src={security} alt="security" />
               <h2 className="text-2xl  font-bold text-center">Security</h2>
             </div>

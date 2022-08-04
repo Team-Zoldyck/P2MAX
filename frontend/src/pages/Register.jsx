@@ -8,8 +8,8 @@ const RegistrationStep =()=>{
 return(
     <main>
     <div className="lg:flex lg:justify-center m-16">
-        <div className="mr-12 m-20">
-<h4 className="text-[22px] font-bold">Sign Up</h4>
+        <div className="mr-12 m-10">
+<h4 className="text-[22px] font-bold mt-10">Sign Up</h4>
 <p className="text-[16px] max-w-sm">Hey there. There is a lot you are missing out on.
 Having an account with us fixes that.</p>
 <p className="text-[12px]">Already have an account? <a href ="/login" class="font-bold text-blue-700 ">Sign in</a></p>
@@ -28,7 +28,7 @@ Having an account with us fixes that.</p>
           <div></div>
         </div>
         <div className="form-text ">
-          <label for="phone-number">Email addres</label>
+          <label for="phone-number">Email address</label>
           <div></div>
         </div>
         <Input type="phone-number" holder="099334" />
@@ -37,8 +37,7 @@ Having an account with us fixes that.</p>
           <div></div>
         </div>
         <Input holder="John Doe" />
-         <p className="text-right  mt-4 text-xs">Forgot your password?</p>
-        <div  className="bg-blue-700 w-full h-9 text-center  pt-1 text-neutral-50 mt-4 text-xs">
+         <div  className="bg-blue-700 w-full h-9 text-center  pt-1 text-neutral-50 mt-4 text-xs">
         
          <Button submit="Register" />
       
@@ -47,7 +46,7 @@ Having an account with us fixes that.</p>
       </form>
         <p className="text-center mt-4">or</p>
         <div className="flex justify-left pl-8 mt-4 text-[14px] border border-slate-300 hover:border-indigo-300 w-full h-9 pt-1.5">
-                <img className="w-5 h-5 mr-5"
+         <img className="w-5 h-5 mr-5"
          src={google} />
         <div  className=" text-center text-blue-700  text-xs"> 
          <Button submit="Continue with Google" />

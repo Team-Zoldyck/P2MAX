@@ -8,7 +8,7 @@ const RegistrationStep =()=>{
 return(
     <main>
     <div className="lg:flex lg:justify-center m-16">
-        <div className="mr-12 m-20">
+        <div className="mr-12 m-10">
 <h4 className="text-[22px] font-bold">One more step</h4>
 <p className="text-[16px] max-w-sm">Your account is almost set up.
 Choose a unique username and proceed.</p>

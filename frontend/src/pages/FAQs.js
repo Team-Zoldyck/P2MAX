@@ -1,30 +1,34 @@
 import React from 'react'
-import Navbar from "../components/Navbar";
 import FAQsCard from "../components/FAQs"
-import Footer from "../components/footer"
 
 const FAQSData = [
     {
+        id: 1,
         title: "What is P2Max?",
         description: ""
     },
     {
+        id: 2,
         title: "How many countries does P2Max operate in?",
         description: "P2Max is present in 19 countries in Africa. We are looking to further increase our reach and influence as we grow."
     },
     {
+        id: 3,
         title: "What are the benefits of having an account?",
         description: ""
     },
     {
+        id: 4,
         title: "What kind of debit cards can I use on P2Max?",
         description: ""
     },
     {
+        id: 5,
         title: "How safe is my wallet?",
         description: ""
     },
     {
+        id: 6,
         title: "Are there transaction limits on a P2Max account?",
         description: ""
     }
@@ -32,7 +36,6 @@ const FAQSData = [
 
 const FAQs = () => {
     return <>
-        <Navbar/>
 
         <section className="mt-20 sm:w-[max-content] mx-auto flex flex-col sm:items-center sm:text-center w-[90%]">
             <div className="flex sm:items-center sm:justify-center">
@@ -57,23 +60,12 @@ const FAQs = () => {
 
             <div className="sm:w-[max-content] w-[90%] mt-20 mx-auto">
                 {
-                    FAQSData?.map(({ title, description }) => {
-                        return <FAQsCard FAQ={ title } description={ description }/>
+                    FAQSData?.map(({ title, description, id }) => {
+                        return <FAQsCard key={ id } FAQ={ title } description={ description }/>
                     })
                 }
             </div>
-
-            <div className="mt-[8rem] mb-12 rounded-xl px-12 py-5 mx-auto bg-subtle w-[max-content] text-left text-matic hidden sm:block">
-                <h3 className="text-[1.25rem] font-bold mb-1">Receive updates</h3>
-                <p>Be the first to receive information about our activities.</p>
-
-                <div className="p-4 bg-[#CDD7E5] mt-5 flex rounded-lg">
-                    <input type="email" placeholder="Your email address" className="rounded-l-lg h-[2.5rem] w-[80%] px-4 outline-none"/>
-                    <button className="w-[20%] bg-secondary rounded-lg text-white ml-[-.3rem]">opt in</button>
-                </div>
-            </div>
         </section>
-        <Footer/>
     </>
 }
 

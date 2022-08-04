@@ -8,8 +8,8 @@ const Login =()=>{
 return(
     <main>
     <div className="lg:flex lg:justify-center m-16">
-        <div className="mr-12 m-20">
-<h4 className="text-[22px] font-bold">Sign In</h4>
+        <div className="mr-12 m-10">
+<h4 className="text-[22px] font-bold mt-10">Sign In</h4>
 <p className="text-[16px]">Hey there. Get right back into your account.</p>
 <p className="text-[12px]">Yet to have an account? <a href ="/register" class="font-bold text-blue-700 ">Create one</a></p>
         </div>
@@ -25,7 +25,7 @@ return(
           <div></div>
         </div>
         <Input holder="John Doe" />
-         <p className="text-right  mt-4 text-xs"><a href="/Forgot">Forgot your password?</a></p>
+         <p className="text-right  mt-4 text-xs"><a href="/forgot">Forgot your password?</a></p>
         <div  className="bg-blue-700 w-full h-9 text-center  pt-1 text-neutral-50 mt-4 text-xs">
         
          <Button submit="Login" />

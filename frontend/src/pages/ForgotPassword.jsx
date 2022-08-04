@@ -8,8 +8,8 @@ const ForgotPassword =()=>{
 return(
     <main>
     <div className="lg:flex lg:justify-center m-16">
-        <div className="mr-12 m-20">
-<h4 className="text-[22px] font-bold">Forgot your password?</h4>
+        <div className="mr-12 m-10">
+<h4 className="text-[22px] font-bold mt-5">Forgot your password?</h4>
 <p className="text-[16px] max-w-sm">In just a few steps, enter your email 
 and a link to reset your password will 
 be sent to you.</p>
