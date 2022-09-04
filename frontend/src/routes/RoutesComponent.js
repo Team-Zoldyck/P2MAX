@@ -1,5 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import ForgotPassword from "../pages/ForgotPassword";
+import Register from "../pages/Register";
 import Login from "../pages/Login";
 import LandingPage from "../pages/LandingPage";
 import FAQs from "../pages/FAQs";
@@ -17,7 +19,9 @@ function RoutesComponent() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/transfer" element={<Transaction />} />
+        <Route path="forgot" element={<ForgotPassword />} />
         <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         <Route path="faqs" element={<FAQs />} />
         <Route path="about" element={<AboutUs />} />
         <Route path="/sendmoney" element={<SendMoney />} />
